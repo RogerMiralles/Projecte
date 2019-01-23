@@ -17,7 +17,8 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editText8"
-        app:layout_constraintTop_toBottomOf="@+id/tViewPSeguro" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewPSeguro"
+        android:importantForAutofill="no" tools:targetApi="o" />
 
     <EditText
         android:id="@+id/editText7"
@@ -27,11 +28,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/tViewApellidos" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewApellidos"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/tViewApellidos"
@@ -55,11 +57,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toStartOf="@+id/editText7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tViewNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewNombre"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/tViewNombre"
@@ -100,7 +103,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editText8"
         app:layout_constraintEnd_toStartOf="@+id/tViewPSeguro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/eTextUsuario"
         tools:text="Contraseña" />
 
     <EditText
@@ -111,11 +114,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/tViewCorreo" />
+        app:layout_constraintStart_toEndOf="@+id/eTextUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/tViewCorreo"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/tViewCorreo"
@@ -139,14 +143,14 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/eTextUsuario"
         app:layout_constraintEnd_toStartOf="@+id/tViewCorreo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Usuario" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/eTextUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -154,10 +158,10 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toStartOf="@+id/editText2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tViewNom" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewNom"
+        android:importantForAutofill="no" tools:targetApi="o" />
 
     <EditText
         android:id="@+id/editText8"
@@ -170,5 +174,6 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/editText9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tViewPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewPassword"
+        android:importantForAutofill="no" tools:targetApi="o" />
 </android.support.constraint.ConstraintLayout>
