@@ -17,7 +17,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editText8"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewPSeguro" />
 
     <EditText
         android:id="@+id/editText7"
@@ -31,21 +31,21 @@
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewApellidos" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/tViewApellidos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/editText7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintStart_toEndOf="@+id/tViewNombre"
+        app:layout_constraintTop_toBottomOf="@+id/editText9"
+        tools:text="Apellidos" />
 
     <EditText
         android:id="@+id/editText6"
@@ -59,49 +59,49 @@
         android:text="Name"
         app:layout_constraintEnd_toStartOf="@+id/editText7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewNombre" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tViewNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/editText6"
-        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/tViewApellidos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintTop_toBottomOf="@+id/editText8"
+        tools:text="Nombre" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tViewPSeguro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/editText9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toEndOf="@+id/tViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        tools:text="Confirma contraseña" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tViewPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/editText8"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/tViewPSeguro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:text="Contraseña" />
 
     <EditText
         android:id="@+id/editText2"
@@ -115,21 +115,21 @@
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewCorreo" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tViewCorreo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tViewNom"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Correo" />
 
     <TextView
         android:id="@+id/tViewNom"
@@ -139,11 +139,11 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Usuario"
         app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/tViewCorreo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Usuario" />
 
     <EditText
         android:id="@+id/editText"
@@ -170,5 +170,5 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/editText9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewPassword" />
 </android.support.constraint.ConstraintLayout>
