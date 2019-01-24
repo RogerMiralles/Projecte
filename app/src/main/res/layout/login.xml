@@ -93,7 +93,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPass"
-        tools:text="@string/btnLogin" />
+        tools:text="@string/btnLogin"
+        android:onClick="onClick"
+        />
 
     <TextView
         android:id="@+id/txtNewUser"
