@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View view) {
-        Intent listSong = new Intent(getApplicationContext(),rvi_lista_ejers.class);
+        Intent listSong = new Intent(this,rvi_lista_ejers.class);
         startActivity(listSong);
     }
 }
