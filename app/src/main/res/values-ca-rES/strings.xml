@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lblUsuari">Usuari</string>
+    <string name="txtPassword">Contrasenya</string>
+    <string name="etPass">Contrasenya</string>
+    <string name="btnLogin">Login</string>
+    <string name="txtNewUser">Nou usuari? Registra\'t!</string>
+    <string name="btnRegistre">Registrar-me</string>
+    <string name="navigation_drawer_open">Obrir navigation drawer</string>
+    <string name="navigation_drawer_close">Tancar navigation drawer</string>
+    <string name="action_settings">Configuració</string>
+    <string name="slEjer">Siusplau, selecciona l\'entrenament</string>
+</resources>

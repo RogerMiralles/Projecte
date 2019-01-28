@@ -94,7 +94,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPass"
-        tools:text="@string/btnLogin" />
+        tools:text="@string/btnLogin"
+        android:onClick="onClick"
+        />
 
     <TextView
         android:id="@+id/txtNewUser"
@@ -123,5 +125,20 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNewUser"
         app:layout_constraintVertical_bias="0.2"
         tools:text="@string/btnRegistre" />
+
+    <Button
+        android:id="@+id/btnIdioma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClickIdioma"
+        android:text="@string/btnCIdioma"
+        app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 </android.support.constraint.ConstraintLayout>
