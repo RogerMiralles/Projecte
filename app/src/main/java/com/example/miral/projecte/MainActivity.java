@@ -3,6 +3,7 @@ package com.example.miral.projecte;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -29,19 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View view) {
-        Intent listSong = new Intent(this,rvi_lista_ejers.class);
+        Intent listSong = new Intent(Settings.ACTION_LOCALE_SETTINGS);
         startActivity(listSong);
     }
-    public void onClickIdioma(View view){
+
+    public void onClickIdioma(View view) {
 
     }
-
-    public void setLocale(String lang){ 
-        Locale locale = new Locale("values-ca-rES");
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-        Intent n = new Intent();
-
-            }
 }
