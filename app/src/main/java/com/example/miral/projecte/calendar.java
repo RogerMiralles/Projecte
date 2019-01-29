@@ -13,7 +13,5 @@ public class calendar extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
     }
 
-    public void data(View view){
-        Toast.makeText(this,"work in progres",Toast.LENGTH_SHORT);
-    }
+
 }
