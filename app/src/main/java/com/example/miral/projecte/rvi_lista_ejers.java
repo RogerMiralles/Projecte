@@ -3,6 +3,8 @@ package com.example.miral.projecte;
 
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -62,8 +64,13 @@ public class rvi_lista_ejers extends AppCompatActivity{
             return true;
     }
 
+
+    private void CargarFragmente(Fragment fragment){
+        FragmentManager manager=getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.contendedorFragmento,fragment).commit();
+    }
     public void aCalendari(View view){
-        Intent listSong = new Intent(this, calendario.class);
-        startActivity(listSong);
+        //Intent listSong = new Intent(this, calendario.class);
+        CargarFragmente(new calendario());
     }
 }
