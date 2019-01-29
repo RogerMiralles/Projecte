@@ -1,17 +1,21 @@
 package com.example.miral.projecte;
 
-import android.support.design.widget.FloatingActionButton;
+
+
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.example.miral.projecte.ui.fragmentcalendario.calendario;
 
 import java.util.LinkedList;
 
-public class rvi_lista_ejers extends AppCompatActivity {
+public class rvi_lista_ejers extends AppCompatActivity{
 
         private final LinkedList<String> mWordList = new LinkedList<>();
 
@@ -19,7 +23,7 @@ public class rvi_lista_ejers extends AppCompatActivity {
         private WordListAdapter mAdapter;
 
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
+        public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_rvi_lista_ejers);
 
@@ -52,8 +56,14 @@ public class rvi_lista_ejers extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
             return true;
+    }
+
+    public void aCalendari(View view){
+        Intent listSong = new Intent(getApplicationContext(), calendario.class);
+        startActivity(listSong);
     }
 }

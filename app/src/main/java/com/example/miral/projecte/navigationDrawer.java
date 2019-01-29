@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.miral.projecte.ui.fragmentcalendario.calendario;
 
@@ -76,21 +77,26 @@ public class navigationDrawer extends AppCompatActivity
         if (id == R.id.nav_camera) {
             CargarFragmente(new calendario());
         } else if (id == R.id.nav_gallery) {
-
+            Toast.makeText(this,"working",Toast.LENGTH_SHORT);
         } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(this,"working",Toast.LENGTH_SHORT);
 
         } else if (id == R.id.nav_manage) {
+            Toast.makeText(this,"working",Toast.LENGTH_SHORT);
 
         } else if (id == R.id.nav_share) {
+            Toast.makeText(this,"working",Toast.LENGTH_SHORT);
 
         } else if (id == R.id.nav_send) {
-
+            Toast.makeText(this,"working",Toast.LENGTH_SHORT);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 
     private void CargarFragmente(Fragment fragment){
         FragmentManager manager=getSupportFragmentManager();
