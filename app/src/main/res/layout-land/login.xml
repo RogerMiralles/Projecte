@@ -7,16 +7,14 @@
     android:background="@color/Gris"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:id="@+id/ivImagenlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.371"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher"
@@ -27,7 +25,7 @@
         android:layout_width="67dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="52dp"
         android:text="@string/txtUsuari"
@@ -42,8 +40,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="220dp"
         android:layout_marginBottom="32dp"
         android:ems="10"
         android:importantForAutofill="no"
@@ -74,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginEnd="220dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
@@ -89,7 +87,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="20dp"
         android:background="@color/Blanco"
@@ -97,9 +94,9 @@
         android:text="@string/btnLogin"
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPass"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread"
         tools:text="@string/btnLogin" />
 
@@ -112,6 +109,7 @@
         android:text="@string/txtNewUser"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistre"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         tools:text="@string/txtNewUser" />
@@ -128,6 +126,7 @@
         android:text="@string/btnRegistre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNewUser"
         app:layout_constraintVertical_bias="0.2"
@@ -146,8 +145,9 @@
         android:text="@string/btnCIdioma"
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
