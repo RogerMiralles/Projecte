@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Gris"
+    >
 
     <ImageView
         android:id="@+id/ivImagenlog"
@@ -46,6 +48,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/etPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvUsuari"
@@ -75,6 +78,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvPass"
         app:layout_constraintTop_toBottomOf="@+id/etUsuari"
@@ -85,15 +89,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="20dp"
+        android:background="@color/Blanco"
         android:onClick="onClick"
         android:text="@string/btnLogin"
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPass"
+        app:layout_constraintVertical_chainStyle="spread"
         tools:text="@string/btnLogin" />
 
     <TextView
@@ -116,6 +123,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/Blanco"
+        android:onClick="onClickRegistre"
         android:text="@string/btnRegistre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,17 +135,19 @@
 
     <Button
         android:id="@+id/btnIdioma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="77dp"
+        android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/Blanco"
         android:onClick="onClickIdioma"
         android:text="@string/btnCIdioma"
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.578" />
 
 </android.support.constraint.ConstraintLayout>

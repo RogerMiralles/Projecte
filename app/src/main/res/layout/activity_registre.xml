@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registre">
+    tools:context=".Registre"
+    android:background="@color/Gris">
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/etxtPassMail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -16,13 +17,14 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:textColor="@color/Blanco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText8"
+        app:layout_constraintStart_toEndOf="@+id/etxtPass"
         app:layout_constraintTop_toBottomOf="@+id/tViewPSeguro"
         tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/etxtApellidos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -31,8 +33,9 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText6"
+        app:layout_constraintStart_toEndOf="@+id/etxtNombre"
         app:layout_constraintTop_toBottomOf="@+id/tViewApellidos"
         tools:targetApi="o" />
 
@@ -44,40 +47,16 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        android:text="@string/lblApellidos"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtApellidos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tViewNombre"
-        app:layout_constraintTop_toBottomOf="@+id/editText9"
+        app:layout_constraintTop_toBottomOf="@+id/etxtPassMail"
         tools:text="Apellidos" />
 
-    <TextView
-        android:id="@+id/tViewApellidos2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tViewApellidos3"
-        app:layout_constraintTop_toBottomOf="@+id/editText7"
-        tools:text="Fecha nacimiento" />
-
-    <TextView
-        android:id="@+id/tViewApellidos3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/tViewApellidos2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
-        tools:text="Sexo" />
-
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/etxtNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -86,7 +65,8 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/editText7"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toStartOf="@+id/etxtApellidos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tViewNombre"
         tools:targetApi="o" />
@@ -99,10 +79,12 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
+        android:text="@string/lblNombre"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtNombre"
         app:layout_constraintEnd_toStartOf="@+id/tViewApellidos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8"
+        app:layout_constraintTop_toBottomOf="@+id/etxtPass"
         tools:text="Nombre" />
 
     <TextView
@@ -113,10 +95,12 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText9"
+        android:text="@string/lblConfContra"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtPassMail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tViewPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/etxtMail"
         tools:text="Confirma contraseña" />
 
     <TextView
@@ -127,14 +111,16 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText8"
+        android:text="@string/etPass"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtPass"
         app:layout_constraintEnd_toStartOf="@+id/tViewPSeguro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eTextUsuario"
         tools:text="Contraseña" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etxtMail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -143,6 +129,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/eTextUsuario"
         app:layout_constraintTop_toBottomOf="@+id/tViewCorreo"
@@ -156,7 +143,9 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        android:text="@string/lblCorreo"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtMail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tViewNom"
         app:layout_constraintTop_toTopOf="parent"
@@ -170,6 +159,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:text="@string/lblUsuari"
+        android:textColor="@color/Blanco"
         app:layout_constraintBottom_toTopOf="@+id/eTextUsuario"
         app:layout_constraintEnd_toStartOf="@+id/tViewCorreo"
         app:layout_constraintStart_toStartOf="parent"
@@ -186,28 +177,14 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toStartOf="@+id/etxtMail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tViewNom"
         tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/eTextUsuario2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tViewApellidos3"
-        tools:targetApi="o" />
-
-    <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/etxtPass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -216,50 +193,26 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toStartOf="@+id/editText9"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toStartOf="@+id/etxtPassMail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tViewPassword"
         tools:targetApi="o" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="registrarme"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
-
-    <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="iniciar sesion"
+        android:onClick="onClick"
+        android:text="@string/btnRegistre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eTextUsuario2"
-        app:layout_constraintTop_toBottomOf="@+id/tViewApellidos2" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.682" />
 </android.support.constraint.ConstraintLayout>

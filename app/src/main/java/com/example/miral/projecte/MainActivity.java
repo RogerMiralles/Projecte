@@ -25,16 +25,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        Button button = (Button) findViewById(R.id.btnLogin);
     }
 
 
     public void onClick(View view) {
-        Intent listSong = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+        Intent listSong = new Intent(getApplicationContext(),rvi_lista_ejers.class);
         startActivity(listSong);
     }
 
     public void onClickIdioma(View view) {
+        Intent listSong = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+        startActivity(listSong);
 
+    }
+    public void onClickRegistre(View view){
+        Intent listSong = new Intent(getApplicationContext(),Registre.class);
+        startActivity(listSong);
     }
 }
