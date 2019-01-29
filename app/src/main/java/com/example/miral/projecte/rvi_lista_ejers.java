@@ -65,12 +65,10 @@ public class rvi_lista_ejers extends AppCompatActivity{
     }
 
 
-    private void CargarFragmente(Fragment fragment){
-        FragmentManager manager=getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.contendedorFragmento,fragment).commit();
-    }
+
     public void aCalendari(View view){
-        //Intent listSong = new Intent(this, calendario.class);
-        CargarFragmente(new calendario());
+        Intent listSong = new Intent(this, calendario.class);
+        startActivity(listSong);
+
     }
 }
