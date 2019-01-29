@@ -10,4 +10,8 @@
     <string name="navigation_drawer_close">Tancar navigation drawer</string>
     <string name="action_settings">Configuració</string>
     <string name="slEjer">Siusplau, selecciona l\'entrenament</string>
+    <string name="lblCorreo">Correu</string>
+    <string name="lblConfContra">Confirma la contrasenya</string>
+    <string name="lblNombre">Nom</string>
+    <string name="lblApellidos">Cognoms</string>
 </resources>

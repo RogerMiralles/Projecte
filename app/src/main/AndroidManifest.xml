@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.miral.projecte.rvi_lista_ejers"/>
+        <activity android:name=".Registre" />
     </application>
 
 </manifest>

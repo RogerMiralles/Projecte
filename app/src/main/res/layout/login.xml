@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Gris"
+    >
 
     <ImageView
         android:id="@+id/ivImagenlog"
@@ -46,6 +48,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/etPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvUsuari"
@@ -75,6 +78,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvPass"
         app:layout_constraintTop_toBottomOf="@+id/etUsuari"
@@ -95,6 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etPass"
         tools:text="@string/btnLogin"
         android:onClick="onClick"
+        android:background="@color/Blanco"
         />
 
     <TextView
@@ -117,6 +122,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/Blanco"
+        android:onClick="onClickRegistre"
         android:text="@string/btnRegistre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,6 +145,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        android:background="@color/Blanco"/>
 
 </android.support.constraint.ConstraintLayout>
