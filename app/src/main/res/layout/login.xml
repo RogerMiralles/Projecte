@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/ivImagenlog"
@@ -89,14 +88,13 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="20dp"
+        android:onClick="onClick"
         android:text="@string/btnLogin"
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPass"
-        tools:text="@string/btnLogin"
-        android:onClick="onClick"
-        />
+        tools:text="@string/btnLogin" />
 
     <TextView
         android:id="@+id/txtNewUser"
