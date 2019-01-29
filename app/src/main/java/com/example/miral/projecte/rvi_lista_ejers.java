@@ -66,8 +66,8 @@ public class rvi_lista_ejers extends AppCompatActivity{
 
 
 
-    public void aCalendari(View view){
-        Intent listSong = new Intent(this, calendario.class);
+    public void onClickCalendari(View view){
+        Intent listSong = new Intent(rvi_lista_ejers.this,calendario.class);
         startActivity(listSong);
 
     }

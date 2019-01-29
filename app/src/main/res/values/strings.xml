@@ -20,4 +20,5 @@
     <string name="lblConfContra">Confirmar la contraseña</string>
     <string name="lblNombre">Nombre</string>
     <string name="lblApellidos">Apellidos</string>
+    <string name="data">data</string>
 </resources>
