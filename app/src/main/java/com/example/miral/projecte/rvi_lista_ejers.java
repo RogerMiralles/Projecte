@@ -63,7 +63,7 @@ public class rvi_lista_ejers extends AppCompatActivity{
     }
 
     public void aCalendari(View view){
-        Intent listSong = new Intent(getApplicationContext(), calendario.class);
+        Intent listSong = new Intent(this, calendario.class);
         startActivity(listSong);
     }
 }
