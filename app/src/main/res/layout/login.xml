@@ -89,18 +89,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="20dp"
+        android:background="@color/Blanco"
+        android:onClick="onClick"
         android:text="@string/btnLogin"
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPass"
-        tools:text="@string/btnLogin"
-        android:onClick="onClick"
-        android:background="@color/Blanco"
-        />
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="@string/btnLogin" />
 
     <TextView
         android:id="@+id/txtNewUser"
@@ -134,18 +135,19 @@
 
     <Button
         android:id="@+id/btnIdioma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="77dp"
+        android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/Blanco"
         android:onClick="onClickIdioma"
         android:text="@string/btnCIdioma"
         app:layout_constraintBottom_toTopOf="@+id/txtNewUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        android:background="@color/Blanco"/>
+        app:layout_constraintVertical_bias="0.578" />
 
 </android.support.constraint.ConstraintLayout>
