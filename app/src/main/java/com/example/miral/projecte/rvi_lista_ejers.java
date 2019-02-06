@@ -3,8 +3,6 @@ package com.example.miral.projecte;
 
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,8 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
-import com.example.miral.projecte.ui.fragmentcalendario.calendario;
 
 import java.util.LinkedList;
 
@@ -67,7 +63,7 @@ public class rvi_lista_ejers extends AppCompatActivity{
 
 
     public void onClickCalendari(View view){
-        Intent listSong = new Intent(rvi_lista_ejers.this,calendario.class);
+        Intent listSong = new Intent(this,navigationDrawer.class);
         startActivity(listSong);
 
     }

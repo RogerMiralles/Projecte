@@ -13,8 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.miral.projecte.ui.fragmentcalendario.calendario;
-
 public class navigationDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -32,7 +30,7 @@ public class navigationDrawer extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView =  findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
