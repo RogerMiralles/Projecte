@@ -61,10 +61,10 @@ public class rvi_lista_ejers extends AppCompatActivity{
     }
 
 
-
+/*
     public void onClickCalendari(View view){
         Intent listSong = new Intent(this,navigationDrawer.class);
         startActivity(listSong);
 
-    }
+    }*/
 }

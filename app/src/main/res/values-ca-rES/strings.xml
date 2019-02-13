@@ -14,4 +14,5 @@
     <string name="lblConfContra">Confirma la contrasenya</string>
     <string name="lblNombre">Nom</string>
     <string name="lblApellidos">Cognoms</string>
+    <string name="txtUsuari">Usuari</string>
 </resources>
