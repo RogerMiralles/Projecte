@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class navegacion extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -78,15 +79,16 @@ public class navegacion extends AppCompatActivity
         if (id == R.id.nav_camera) {
             CargarFragmente(new calendario());
         } else if (id == R.id.nav_gallery) {
-
+            CargarFragmente(new ftest());
+            //Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_slideshow) {
-
+            Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_manage) {
-
+            Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_share) {
-
+            Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {
-
+            Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

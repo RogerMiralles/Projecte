@@ -2,7 +2,7 @@
 
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,10 +20,16 @@
 
 
         </android.support.design.widget.AppBarLayout>
-
+<!--
     <include
         android:id="@+id/include"
-        layout="@layout/content_main" />
+        layout="@layout/content_main" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
 
     <Button
         android:id="@+id/btnCalendari"
@@ -33,9 +39,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="36dp"
         android:onClick="onClickCalendari"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|center"
 
+        app:layout_anchor="@+id/recyclerview"
+        app:layout_anchorGravity="bottom|center"
         tools:text="Calendari" />
 
 
