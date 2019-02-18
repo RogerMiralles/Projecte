@@ -8,7 +8,7 @@
     android:background="@color/Gris">
 
     <EditText
-        android:id="@+id/etxtPassMail"
+        android:id="@+id/etxtPass2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toTopOf="@+id/etxtApellidos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tViewNombre"
-        app:layout_constraintTop_toBottomOf="@+id/etxtPassMail"
+        app:layout_constraintTop_toBottomOf="@+id/etxtPass2"
         tools:text="Apellidos" />
 
     <EditText
@@ -97,7 +97,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/lblConfContra"
         android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/etxtPassMail"
+        app:layout_constraintBottom_toTopOf="@+id/etxtPass2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tViewPassword"
         app:layout_constraintTop_toBottomOf="@+id/etxtMail"
@@ -121,18 +121,19 @@
 
     <EditText
         android:id="@+id/etxtMail"
-        android:layout_width="0dp"
+        android:layout_width="168dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eTextUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/tViewCorreo"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="o" />
 
     <TextView
@@ -169,16 +170,17 @@
 
     <EditText
         android:id="@+id/eTextUsuario"
-        android:layout_width="0dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
-        app:layout_constraintEnd_toStartOf="@+id/etxtMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tViewNom"
         tools:targetApi="o" />
@@ -194,7 +196,7 @@
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:textColor="@color/Blanco"
-        app:layout_constraintEnd_toStartOf="@+id/etxtPassMail"
+        app:layout_constraintEnd_toStartOf="@+id/etxtPass2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tViewPassword"
         tools:targetApi="o" />
@@ -215,4 +217,82 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.682" />
+
+    <TextView
+        android:id="@+id/txtErrorUsu"
+        android:layout_width="168dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/txtLblError"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tViewPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCorreoNoValido"
+        android:layout_width="174dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/lblTextoNoValido"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/tViewPSeguro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtMail"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/txtErrorContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/ErrorContraseñas"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtnombreError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/TxtErrorNombre"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtApellidosError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/txtApellidosError"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
