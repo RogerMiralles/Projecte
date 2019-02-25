@@ -79,8 +79,7 @@ public class navegacion extends AppCompatActivity
         if (id == R.id.nav_camera) {
             CargarFragmente(new calendario());
         } else if (id == R.id.nav_gallery) {
-            CargarFragmente(new ftest());
-            //Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
+            CargarFragmente(new video());
         } else if (id == R.id.nav_slideshow) {
             Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_manage) {
