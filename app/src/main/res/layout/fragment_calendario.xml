@@ -10,12 +10,12 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCalendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="137dp"
         android:layout_marginTop="269dp"
-        android:text="Button"
+        android:text="@string/date_picker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

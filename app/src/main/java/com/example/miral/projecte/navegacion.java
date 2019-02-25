@@ -99,4 +99,5 @@ public class navegacion extends AppCompatActivity
         FragmentManager manager=getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.contendedorFragmento,fragment).commit();
     }
+
 }
