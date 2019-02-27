@@ -29,11 +29,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:text="@string/guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/eTxtOpinion" />
 
     <EditText
         android:id="@+id/eTxtFecha"
@@ -46,41 +46,41 @@
         android:ems="10"
         android:enabled="false"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/eTxtEjercicio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/tViewFecha"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tViewFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:text="@string/fecha"
+        app:layout_constraintBottom_toTopOf="@+id/tViewEjercicio"
         app:layout_constraintEnd_toStartOf="@+id/eTxtFecha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tViewEjercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="77dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        android:text="@string/ejercicio"
+        app:layout_constraintBottom_toTopOf="@+id/tViewOpinion"
+        app:layout_constraintEnd_toStartOf="@+id/eTxtEjercicio"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewFecha" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/eTxtEjercicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -89,26 +89,26 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        android:text="@string/ejercicio"
+        app:layout_constraintBottom_toTopOf="@+id/eTxtOpinion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/tViewEjercicio"
         app:layout_constraintTop_toBottomOf="@+id/eTxtFecha" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tViewOpinion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        android:text="@string/opinion"
+        app:layout_constraintEnd_toStartOf="@+id/eTxtOpinion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tViewEjercicio" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/eTxtOpinion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -117,9 +117,9 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="@string/opinion"
         app:layout_constraintBottom_toTopOf="@+id/btnAceptarGuardar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toEndOf="@+id/tViewOpinion"
+        app:layout_constraintTop_toBottomOf="@+id/eTxtEjercicio" />
 </android.support.constraint.ConstraintLayout>
