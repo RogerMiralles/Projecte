@@ -27,9 +27,10 @@
     <string name="title_activity_navegacion" translatable="false">navegacion</string>
     <string name="txtExiste">¿Tienes ya cuenta registrada?</string>
     <string name="guardar">Guardar</string>
-    <string name="opinion">Opinion</string>
-    <string name="ejercicio">Ejercicio</string>
-    <string name="opinion">Opinion</string>
-    <string name="ejercicio">Ejercicio</string>
+
     <string name="fecha">Fecha</string>
+    <string name="opinion_tView">Opinion</string>
+    <string name="ejercicio_tView">Ejercicio</string>
+    <string name="ejercicio">ejercicio</string>
+    <string name="opinion">opinion</string>
 </resources>

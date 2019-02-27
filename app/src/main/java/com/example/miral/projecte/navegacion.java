@@ -81,7 +81,7 @@ public class navegacion extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             CargarFragmente(new video());
         } else if (id == R.id.nav_slideshow) {
-            Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
+            CargarFragmente(new frecicler());
         } else if (id == R.id.nav_manage) {
             Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_share) {

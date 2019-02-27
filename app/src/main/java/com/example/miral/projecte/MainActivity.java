@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View view) {
-        Intent listSong = new Intent(getApplicationContext(), rvi_lista_ejers.class);
+        Intent listSong = new Intent(getApplicationContext(), navegacion.class);
         startActivity(listSong);
     }
 
