@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">Proyecto</string>
     <string name="txtUsuari" translatable="false">Usuario</string>
-    <string name="lblUsuari">Usuario</string>
+    <string name="lblUsuari">Correo</string>
     <string name="txtPassword">Contraseña</string>
     <string name="etPass">Contraseña</string>
     <string name="btnLogin">Login</string>

@@ -1,4 +1,4 @@
-package com.example.miral.projecte;
+package com.example.miral.projecte.MyDb;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
@@ -31,6 +31,8 @@ public class Usuari {
         this.contrasenya = contrasenya;
         this.correu = correu;
     }
+    public Usuari(){}
+
 
 
 
