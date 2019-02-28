@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lblUsuari">Usuari</string>
+    <string name="lblUsuari">Correu</string>
     <string name="txtPassword">Contrasenya</string>
     <string name="etPass">Contrasenya</string>
     <string name="btnLogin">Login</string>
@@ -15,4 +15,11 @@
     <string name="lblNombre">Nom</string>
     <string name="lblApellidos">Cognoms</string>
     <string name="txtExiste">Tens ja un compte creat?</string>
+    <string name="guardar">Guardar</string>
+    <string name="fecha">Data</string>
+    <string name="opinion_tView">Opinió</string>
+    <string name="ejercicio_tView">Exercici</string>
+    <string name="ejercicio">Exercici</string>
+    <string name="opinion">Opinió</string>
+    <string name="bienvenido_a_t25">Benvingut a T25</string>
 </resources>

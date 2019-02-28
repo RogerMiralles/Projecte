@@ -1,4 +1,4 @@
-package com.example.miral.projecte;
+package com.example.miral.projecte.MyDb;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -17,7 +17,7 @@ public class UsuariViewModel extends AndroidViewModel {
         mAllWords = mRepository.getAllUsuari();
     }
 
-    LiveData<List<Usuari>> getAllWords(){ return mAllWords;}
+    public LiveData<List<Usuari>> getAllWords(){ return mAllWords;}
 
-    public void Insert(Usuari usuari) {mRepository.insert(usuari);}
+    public void insert(Usuari usuari) {mRepository.insert(usuari);}
 }

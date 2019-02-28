@@ -1,4 +1,4 @@
-package com.example.miral.projecte;
+package com.example.miral.projecte.MyDb;
 
 
 import android.app.Application;
