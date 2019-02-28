@@ -1,6 +1,7 @@
-package com.example.miral.projecte;
+package com.example.miral.projecte.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,13 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.miral.projecte.MainActivity;
+import com.example.miral.projecte.R;
+import com.example.miral.projecte.WordListAdapter;
+
 import java.util.LinkedList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class frecicler extends Fragment {
+public class frecicler extends Fragment implements WordListAdapter.ItemClickListener {
 
     private final LinkedList<String> mWordList = new LinkedList<>();
 
@@ -45,9 +50,16 @@ public class frecicler extends Fragment {
 
 
         mAdapter = new WordListAdapter(getActivity().getApplicationContext(),mWordList);
-
+        mAdapter.setClickListener(this);
         mRecyclerView.setAdapter(mAdapter);
         return rootView;
     }
-
+    public void onItemClick(View view,int position){
+        switch(position){
+            case 1:
+                Intent listSong = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                startActivity(listSong);
+                break;
+        }
+    }
 }

@@ -22,6 +22,7 @@ public class WordListAdapter extends
 
     private final LinkedList<String> mWordList;
     private final LayoutInflater mInflater;
+    private ItemClickListener listener;
 
     class WordViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
@@ -37,10 +38,17 @@ public class WordListAdapter extends
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(view.getContext(),"Work in progess",Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(view.getContext(), calendario.class);
-
+            if (listener != null) listener.onItemClick(view, getAdapterPosition());
         }
+    }
+
+    public void setClickListener(ItemClickListener itemClickListener) {
+        this.listener = itemClickListener;
+    }
+
+
+    public interface ItemClickListener {
+        void onItemClick(View view, int position);
     }
 
     public WordListAdapter(Context context, LinkedList<String> wordList) {

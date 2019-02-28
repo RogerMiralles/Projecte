@@ -1,4 +1,4 @@
-package com.example.miral.projecte;
+package com.example.miral.projecte.fragments;
 
 
 import android.content.Intent;
@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.miral.projecte.R;
 
 
 /**

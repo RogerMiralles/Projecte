@@ -13,7 +13,7 @@ import android.view.View;
 
 import java.util.LinkedList;
 
-public class rvi_lista_ejers extends AppCompatActivity{
+public class rvi_lista_ejers extends AppCompatActivity {
 
         private final LinkedList<String> mWordList = new LinkedList<>();
 
@@ -39,11 +39,7 @@ public class rvi_lista_ejers extends AppCompatActivity{
 
 
             mAdapter = new WordListAdapter(this,mWordList);
-
             mRecyclerView.setAdapter(mAdapter);
-
-
-
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
@@ -54,17 +50,20 @@ public class rvi_lista_ejers extends AppCompatActivity{
             return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
             return true;
     }
+/*
+    public void onItemClick(View view,int position){
+        switch(position){
+            case 1:
+                Intent listSong = new Intent(this,calendario.class);
+                startActivity(listSong);
+                break;
+        }
 
-
-
-    public void onClickCalendari(View view){
         Intent listSong = new Intent(this,navegacion.class);
         startActivity(listSong);
-
-    }
+    }*/
 }
