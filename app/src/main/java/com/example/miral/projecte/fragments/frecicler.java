@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.example.miral.projecte.MainActivity;
 import com.example.miral.projecte.R;
 import com.example.miral.projecte.WordListAdapter;
+import com.example.miral.projecte.ventanasVideos.vCardio;
 
 import java.util.LinkedList;
 
@@ -57,8 +58,28 @@ public class frecicler extends Fragment implements WordListAdapter.ItemClickList
     public void onItemClick(View view,int position){
         switch(position){
             case 1:
-                Intent listSong = new Intent(getActivity().getApplicationContext(), MainActivity.class);
-                startActivity(listSong);
+                Intent intCardio = new Intent(getActivity().getApplicationContext(), vCardio.class);
+                startActivity(intCardio);
+                break;
+            case 2:
+                Intent intSpeed = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                startActivity(intSpeed);
+                break;
+            case 3:
+                Intent intTBC = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                startActivity(intTBC);
+                break;
+            case 4:
+                Intent intABint = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                startActivity(intABint);
+                break;
+            case 5:
+                Intent intLowFoc = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                startActivity(intLowFoc);
+                break;
+            case 6:
+                Intent intDouble = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                startActivity(intDouble);
                 break;
         }
     }
