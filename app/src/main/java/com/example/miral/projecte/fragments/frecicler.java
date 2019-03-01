@@ -17,12 +17,7 @@ import android.widget.Toast;
 import com.example.miral.projecte.MainActivity;
 import com.example.miral.projecte.R;
 import com.example.miral.projecte.WordListAdapter;
-import com.example.miral.projecte.ventanasVideos.vABinterval;
-import com.example.miral.projecte.ventanasVideos.vCardio;
-import com.example.miral.projecte.ventanasVideos.vDouble;
-import com.example.miral.projecte.ventanasVideos.vLowerFocus;
-import com.example.miral.projecte.ventanasVideos.vSpeed;
-import com.example.miral.projecte.ventanasVideos.vTBC;
+import com.example.miral.projecte.ventanasVideos.*;
 
 import java.util.LinkedList;
 

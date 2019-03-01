@@ -17,6 +17,7 @@ import com.example.miral.projecte.fragments.calendario;
 import com.example.miral.projecte.fragments.compartir;
 import com.example.miral.projecte.fragments.frecicler;
 import com.example.miral.projecte.fragments.idioma;
+import com.example.miral.projecte.fragments.perfil;
 
 public class navegacion extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -86,11 +87,14 @@ public class navegacion extends AppCompatActivity
             CargarFragmente(new idioma());
         } else if (id == R.id.nav_manage) {
             CargarFragmente(new compartir());
+        }else if(id==R.id.nav_perfil) {
+            CargarFragmente(new perfil());
         }/* else if (id == R.id.nav_share) {
             Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {
             Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         }*/
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

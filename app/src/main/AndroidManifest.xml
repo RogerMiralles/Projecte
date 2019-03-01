@@ -20,6 +20,7 @@
         <activity
             android:name=".navegacion"
             android:label="@string/title_activity_navegacion"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
