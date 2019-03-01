@@ -14,8 +14,9 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.miral.projecte.fragments.calendario;
+import com.example.miral.projecte.fragments.compartir;
 import com.example.miral.projecte.fragments.frecicler;
-import com.example.miral.projecte.fragments.video;
+import com.example.miral.projecte.fragments.idioma;
 
 public class navegacion extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,7 +29,6 @@ public class navegacion extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        getSupportFragmentManager().beginTransaction().replace(R.id.contendedorFragmento,new calendario()).commit();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -36,6 +36,8 @@ public class navegacion extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        CargarFragmente(new calendario());
+        navigationView.getMenu().getItem(0).setChecked(true);
     }
 
     @Override
@@ -79,11 +81,11 @@ public class navegacion extends AppCompatActivity
         if (id == R.id.nav_camera) {
             CargarFragmente(new calendario());
         } else if (id == R.id.nav_gallery) {
-            CargarFragmente(new video());
-        } else if (id == R.id.nav_slideshow) {
             CargarFragmente(new frecicler());
+        } else if (id == R.id.nav_slideshow) {
+            CargarFragmente(new idioma());
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
+            CargarFragmente(new compartir());
         }/* else if (id == R.id.nav_share) {
             Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {

@@ -13,10 +13,9 @@ import android.widget.VideoView;
 
 import com.example.miral.projecte.R;
 
-public class vCardio extends AppCompatActivity {
+public class vSpeed extends AppCompatActivity {
     private static final String VIDEO_SAMPLE =
             "https://developers.google.com/training/images/tacoma_narrows.mp4";
-
     private VideoView mVideoView;
     private TextView mBufferingTextView;
     private TextView nombreEj;
@@ -28,21 +27,18 @@ public class vCardio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_v_cardio);
-
+        setContentView(R.layout.activity_v_speed);
+        nombreEj=findViewById(R.id.tViewNombreEjercicio);
+        nombreEj.setText("Speed");
         mVideoView = findViewById(R.id.videoview);
         mBufferingTextView = findViewById(R.id.buffering_textview);
-        nombreEj=findViewById(R.id.tViewNombreEjercicio);
-        nombreEj.setText("Cardio");
         if (savedInstanceState != null) {
             mCurrentPosition = savedInstanceState.getInt(PLAYBACK_TIME);
         }
         MediaController controller = new MediaController(this);
-
         controller.setMediaPlayer(mVideoView);
         mVideoView.setMediaController(controller);
     }
-
 
     @Override
     protected void onStart() {
@@ -96,7 +92,7 @@ public class vCardio extends AppCompatActivity {
                 new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mediaPlayer) {
-                        Toast.makeText(vCardio.this,
+                        Toast.makeText(vSpeed.this,
                                 "Playback completed.",
                                 Toast.LENGTH_SHORT).show();
                         mVideoView.seekTo(0);

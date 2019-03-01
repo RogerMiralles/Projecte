@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registre"
-    android:background="@color/Gris">
+    android:background="@color/Gris"
+    tools:context=".Registre">
 
     <EditText
         android:id="@+id/etxtPass2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:importantForAutofill="no"
@@ -118,18 +118,17 @@
 
     <EditText
         android:id="@+id/etxtMail"
-        android:layout_width="168dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="78dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eTextUsuario"
         app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="o" />
 
@@ -167,7 +166,7 @@
 
     <EditText
         android:id="@+id/eTextUsuario"
-        android:layout_width="160dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="8dp"
@@ -177,8 +176,8 @@
         android:inputType="textPersonName"
         android:textColor="@color/Blanco"
         app:layout_constraintBottom_toTopOf="@+id/txtErrorUsu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/etxtMail"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         tools:targetApi="o" />
 
@@ -302,12 +301,14 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="220dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistro" />
 
     <TextView
         android:id="@+id/txtCuentaExistente"

@@ -26,9 +26,6 @@ public class calendario extends Fragment {
     CalendarView calendar;
     EditText fecha;
     Button button;
-    public calendario() {
-        // Required empty public constructor
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
