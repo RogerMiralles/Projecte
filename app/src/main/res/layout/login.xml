@@ -146,4 +146,23 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.578" />
 
+    <TextView
+        android:id="@+id/txtBenvingut"
+        android:layout_width="277dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/bienvenido_a_t25"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/simple_anim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
