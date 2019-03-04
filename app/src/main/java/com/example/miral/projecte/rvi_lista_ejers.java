@@ -57,7 +57,7 @@ public class rvi_lista_ejers extends AppCompatActivity {
 /*
     public void onItemClick(View view,int position){
         switch(position){
-            case 1:
+            case A1:
                 Intent listSong = new Intent(this,calendario.class);
                 startActivity(listSong);
                 break;

@@ -48,7 +48,7 @@ public class idioma extends Fragment implements WordListAdapter.ItemClickListene
         /*switch(position){
             case 0:
                 break;
-            case 1:
+            case A1:
                 break;
             case 2:
                 break;
