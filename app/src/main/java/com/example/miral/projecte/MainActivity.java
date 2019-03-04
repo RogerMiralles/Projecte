@@ -3,12 +3,14 @@ package com.example.miral.projecte;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView lblEmail;
     private TextView lblPassword;
     public Usuari temp = null;
+    private AnimationDrawable anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         lblEmail = findViewById(R.id.etUsuari);
         lblPassword = findViewById(R.id.etPass);
+        Animation();
 
         loginViewModel = ViewModelProviders.of(MainActivity.this).get(UsuariViewModel.class);
 /*        loginViewModel.getAllWords().observe(this, new Observer<List<Usuari>>() {
@@ -119,4 +123,16 @@ public class MainActivity extends AppCompatActivity {
         temp =null;
         loginViewModel = ViewModelProviders.of(MainActivity.this).get(UsuariViewModel.class);
     }
+
+    private void Animation() {
+        ImageView img = (ImageView)findViewById(R.id.simple_anim);
+        anim = (AnimationDrawable)img.getDrawable();
+        img.post(run);
+    }
+    Runnable run = new Runnable() {
+        @Override
+        public void run() {
+            anim.start();
+        }
+    };
 }
