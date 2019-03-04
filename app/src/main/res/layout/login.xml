@@ -7,6 +7,89 @@
     android:background="@color/Gris"
     tools:context=".MainActivity">
 
+    <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/animation"
+        android:layout_width="174dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="67dp"
+        android:oneshot="false"
+        app:layout_constraintBottom_toTopOf="@+id/etUsuari"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <item
+            android:drawable="@drawable/1"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/2"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/3"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/4"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/5"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/6"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/7"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/8"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/9"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/10"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/11"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/12"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/13"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/14"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/15"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/16"
+            android:duration="25" />
+
+        <item
+            android:drawable="@drawable/17"
+            android:duration="25" />
+
+    </animation-list>
 
     <TextView
         android:id="@+id/tvUsuari"
