@@ -95,6 +95,7 @@ public class Registre extends AppCompatActivity {
         }
 
         if(!t[0]) {
+            /*
             loginViewModel.getAllWords().observe(this, new Observer<List<Usuari>>() {
                 @Override
                 public void onChanged(@Nullable List<Usuari> usuaris) {
@@ -107,7 +108,7 @@ public class Registre extends AppCompatActivity {
                     }
                 }
 
-            });
+            });*/
             if(t[0]){
 
 
