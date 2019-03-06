@@ -24,4 +24,8 @@
     <string name="bienvenido_a_t25">Benvingut a T25</string>
     <string name="app_name">Projecte</string>
     <string name="txtUsuari">Usuari</string>
+    <string name="eCorreo">Introdueix un correu.</string>
+    <string name="econtra">introdueix una contrsenya.</string>
+    <string name="noCoincide">La contrasenya no coincideix.</string>
+    <string name="errorCorreo">Correu no trobat.</string>
 </resources>

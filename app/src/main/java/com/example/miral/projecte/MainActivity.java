@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(TextUtils.isEmpty(strEmail)){
-            Toast.makeText(this,"Introduce un correo.",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.eCorreo),Toast.LENGTH_LONG).show();
         }else if(TextUtils.isEmpty(strPassword)){
-            Toast.makeText(this,"Introduce una contraseña.",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.econtra),Toast.LENGTH_LONG).show();
         }else{
             temp = loginViewModel.getAllWords().getValue();
                     for (int i = 0; i<temp.size();i++){
@@ -85,12 +85,12 @@ public class MainActivity extends AppCompatActivity {
                                 tempUsu = temp.get(i);
 
                             }else{
-                                Toast.makeText(MainActivity.this,"La contraseña no coincide",Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this,getString(R.string.noCoincide),Toast.LENGTH_LONG).show();
                             }
                         }
                     }
                     if (tempUsu==null && !encontrado[0]){
-                        Toast.makeText(MainActivity.this,"correo no encontrado", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,getString(R.string.errorCorreo), Toast.LENGTH_LONG).show();
                     }else{
 
                         Intent listSong = new Intent(getApplicationContext(), navegacion.class);

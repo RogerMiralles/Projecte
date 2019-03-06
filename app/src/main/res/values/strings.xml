@@ -37,4 +37,9 @@
     <string name="title_activity_v_cardio" translatable="false">vCardio</string>
     <string name="buffering_string" translatable="false">buffering</string>
     <string name="cardio" translatable="false">Cardio</string>
+    <!-- TODO: strings que referencian al codigo -->
+    <string name="eCorreo">Introduce un correo.</string>
+    <string name="econtra">Introduce una contraseña.</string>
+    <string name="noCoincide">La contraseña no coincide.</string>
+    <string name="errorCorreo">correo no encontrado.</string>
 </resources>
