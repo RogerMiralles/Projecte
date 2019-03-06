@@ -42,4 +42,12 @@
     <string name="econtra">Introduce una contraseña.</string>
     <string name="noCoincide">La contraseña no coincide.</string>
     <string name="errorCorreo">correo no encontrado.</string>
+    <string name="NnoValido">Nombre no valido</string>
+    <string name="errorApellidos">Apellido/s no valido/s.</string>
+    <string name="Success">Añadido correctamente.</string>
+    <string name="ErrorCorreo">Correo invalido.</string>
+    <string name="CorreuUsado">Correo en uso.</string>
+    <string name="ErrorUsuaRegistro">El usuario es demasiado corto.</string>
+    <string name="ContrasenyasDistintas">Las contraseñas no coinciden.</string>
+    <string name="ContrasenyaCorta">La contraseña es demasiado corta(minimo 8 caracteres).</string>
 </resources>

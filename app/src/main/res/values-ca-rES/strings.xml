@@ -28,4 +28,12 @@
     <string name="econtra">introdueix una contrsenya.</string>
     <string name="noCoincide">La contrasenya no coincideix.</string>
     <string name="errorCorreo">Correu no trobat.</string>
+    <string name="NnoValido">Nom no vàlid.</string>
+    <string name="errorApellidos">cognom/s no vàlid/s.</string>
+    <string name="Success">Afegit correctament.</string>
+    <string name="ErrorCorreo">Correu invàlid.</string>
+    <string name="CorreuUsado">Correu ja registrat.</string>
+    <string name="ErrorUsuaRegistro">L\'usuari es molt curt.</string>
+    <string name="ContrasenyasDistintas">Les contrasenyes no coinicideixen.</string>
+    <string name="ContrasenyaCorta">La contrasenya es molt curta(mínim 8 caràcters).</string>
 </resources>

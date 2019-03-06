@@ -68,18 +68,18 @@ public class Registre extends AppCompatActivity {
         if(compruebaNom(nom)){
             temp = true;
             enombre.setVisibility(View.VISIBLE);
-            enombre.setText("Nombre no valido");
+            enombre.setText(getString(R.string.NnoValido));
         }
         String ape = apellidos.getText().toString().trim();
         if(compruebaNom(ape)){
             temp = true;
             eapellidos.setVisibility(View.VISIBLE);
-            eapellidos.setText("Apellido/s no valido/s");
+            eapellidos.setText(getString(R.string.errorApellidos));
         }
         if(!temp) {
             Usuari usuari = new Usuari(usu, nom, ape, pass, ema);
             loginViewModel.insert(usuari);
-            Toast.makeText(this,"Añadido correctamente",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.Success),Toast.LENGTH_LONG).show();
             this.finish();
         }
 
@@ -91,7 +91,7 @@ public class Registre extends AppCompatActivity {
         if(!email.contains("@")){
             t[0] = true;
             eemail.setVisibility(View.VISIBLE);
-            eemail.setText("Correo invalido");
+            eemail.setText(getString(R.string.ErrorCorreo));
         }
 
         if(!t[0]) {
@@ -112,7 +112,7 @@ public class Registre extends AppCompatActivity {
 
 
                 eemail.setVisibility(View.VISIBLE);
-            eemail.setText("Correo en uso");
+            eemail.setText(getString(R.string.CorreuUsado));
         }}
             return t[0];
     }
@@ -120,7 +120,7 @@ public class Registre extends AppCompatActivity {
         if(usu.length()>=4){ return false;}
         else{
             eusuario.setVisibility(View.VISIBLE);
-            eusuario.setText("El usuario es demasiado corto");
+            eusuario.setText(getString(R.string.ErrorUsuaRegistro));
             return true;
         }
     }
@@ -131,12 +131,12 @@ public class Registre extends AppCompatActivity {
             }
             else{
                 epass1.setVisibility(View.VISIBLE);
-                epass1.setText("Las contraseñas no coinciden");
+                epass1.setText(getString(R.string.ContrasenyasDistintas));
                 return true;
             }
         }else{
             epass1.setVisibility(View.VISIBLE);
-            epass1.setText("Las contraseña es demasiado corta(minimo 8 caracteres)");
+            epass1.setText(getString(R.string.ContrasenyaCorta));
             return true;
         }
     }
