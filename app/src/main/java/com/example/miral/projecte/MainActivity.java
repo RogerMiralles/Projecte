@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private UsuariViewModel loginViewModel;
     private TextView lblEmail;
     private TextView lblPassword;
-    public Usuari temp = null;
+    public Usuari tempUsu = null;
     private AnimationDrawable anim;
+    private List<Usuari> temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
         Animation();
 
         loginViewModel = ViewModelProviders.of(MainActivity.this).get(UsuariViewModel.class);
-/*        loginViewModel.getAllWords().observe(this, new Observer<List<Usuari>>() {
+        loginViewModel.getAllWords().observe(this, new Observer<List<Usuari>>() {
             @Override
-            public void onChanged(@Nullable List<Usuari> usuaris) {
+            public void onChanged(@Nullable List<Usuari> tempUsu) {
                 try{
-
+                    temp = tempUsu;
                 }catch (Exception e){
                     e.printStackTrace();
                 }
             }
-        }); */
+        });
     }
 
 
@@ -63,34 +64,32 @@ public class MainActivity extends AppCompatActivity {
         }else if(TextUtils.isEmpty(strPassword)){
             Toast.makeText(this,"Introduce una contraseña.",Toast.LENGTH_LONG).show();
         }else{
-            loginViewModel.getAllWords().observe(this, new Observer<List<Usuari>>() {
-                @Override
-                public void onChanged(@Nullable List<Usuari> usuaris) {
-                    for (int i = 0; i<usuaris.size();i++){
+            temp = loginViewModel.getAllWords().getValue();
+                    for (int i = 0; i<temp.size();i++){
                         /*
                         if(usu.getCorreu()==strEmail){
                             if(usu.getContrasenya()==strPassword){
                                 Toast.makeText(MainActivity.this, "Contraseña y correo correctos.", Toast.LENGTH_SHORT).show();
-                                temp = usu;
+                                tempUsu = usu;
 
                             }else{
                                 Toast.makeText(MainActivity.this,"La contraseña no coincide",Toast.LENGTH_LONG).show();
                             }
                         }
                         */
-                        Toast.makeText(MainActivity.this,(usuaris.get(i).getCorreu()+":"+usuaris.get(i).getContrasenya()+", "+strEmail+":"+strPassword), Toast.LENGTH_SHORT).show();
-                        if(usuaris.get(i).getCorreu().equals(strEmail)){
+                        Toast.makeText(MainActivity.this,(temp.get(i).getCorreu()+":"+temp.get(i).getContrasenya()+", "+strEmail+":"+strPassword), Toast.LENGTH_SHORT).show();
+                        if(temp.get(i).getCorreu().equals(strEmail)){
                             encontrado[0] = true;
-                            if(usuaris.get(i).getContrasenya().equals(strPassword)){
+                            if(temp.get(i).getContrasenya().equals(strPassword)){
 //                                Toast.makeText(MainActivity.this, "Contraseña y correo correctos.", Toast.LENGTH_SHORT).show();
-                                temp = usuaris.get(i);
+                                tempUsu = temp.get(i);
 
                             }else{
                                 Toast.makeText(MainActivity.this,"La contraseña no coincide",Toast.LENGTH_LONG).show();
                             }
                         }
                     }
-                    if (temp==null && !encontrado[0]){
+                    if (tempUsu==null && !encontrado[0]){
                         Toast.makeText(MainActivity.this,"correo no encontrado", Toast.LENGTH_LONG).show();
                     }else{
 
@@ -99,13 +98,13 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
-            });
+
 
         }
 /*
         Intent listSong = new Intent(getApplicationContext(), navegacion.class);
         startActivity(listSong);*/
-    }
+
 
     public void onClickIdioma(View view) {
         Intent listSong = new Intent(Settings.ACTION_LOCALE_SETTINGS);
@@ -120,8 +119,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume(){
         super.onResume();
-        temp =null;
+        tempUsu =null;
         loginViewModel = ViewModelProviders.of(MainActivity.this).get(UsuariViewModel.class);
+
     }
 
     private void Animation() {
