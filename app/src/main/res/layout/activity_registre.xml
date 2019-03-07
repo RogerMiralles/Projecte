@@ -5,7 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Gris"
-    tools:context=".Registre">
+    tools:context=".Registre"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <TextView
+        android:id="@+id/tViewNom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/txtUsuari"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/eTextUsuario"
+        app:layout_constraintEnd_toStartOf="@+id/tViewCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Usuario" />
 
     <EditText
         android:id="@+id/etxtPass2"
@@ -17,6 +36,7 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:selectAllOnFocus="false"
         android:textColor="@color/Blanco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/etxtPass"
@@ -148,21 +168,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Correo" />
 
-    <TextView
-        android:id="@+id/tViewNom"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/lblUsuari"
-        android:textColor="@color/Blanco"
-        app:layout_constraintBottom_toTopOf="@+id/eTextUsuario"
-        app:layout_constraintEnd_toStartOf="@+id/tViewCorreo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Usuario" />
 
     <EditText
         android:id="@+id/eTextUsuario"

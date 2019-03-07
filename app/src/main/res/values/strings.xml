@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name" translatable="false">Proyecto</string>
-    <string name="txtUsuari" translatable="false">Usuario</string>
+    <string name="app_name">Proyecto</string>
+    <string name="txtUsuari">Usuario</string>
     <string name="lblUsuari">Correo</string>
     <string name="txtPassword">Contraseña</string>
     <string name="etPass">Contraseña</string>
@@ -34,7 +34,20 @@
     <string name="ejercicio">ejercicio</string>
     <string name="opinion">opinion</string>
     <string name="bienvenido_a_t25">Bienvenido a T25</string>
-    <string name="title_activity_v_cardio">vCardio</string>
-    <string name="buffering_string">buffering</string>
-    <string name="cardio">Cardio</string>
+    <string name="title_activity_v_cardio" translatable="false">vCardio</string>
+    <string name="buffering_string" translatable="false">buffering</string>
+    <string name="cardio" translatable="false">Cardio</string>
+    <!-- TODO: strings que referencian al codigo -->
+    <string name="eCorreo">Introduce un correo.</string>
+    <string name="econtra">Introduce una contraseña.</string>
+    <string name="noCoincide">La contraseña no coincide.</string>
+    <string name="errorCorreo">correo no encontrado.</string>
+    <string name="NnoValido">Nombre no valido</string>
+    <string name="errorApellidos">Apellido/s no valido/s.</string>
+    <string name="Success">Añadido correctamente.</string>
+    <string name="ErrorCorreo">Correo invalido.</string>
+    <string name="CorreuUsado">Correo en uso.</string>
+    <string name="ErrorUsuaRegistro">El usuario es demasiado corto.</string>
+    <string name="ContrasenyasDistintas">Las contraseñas no coinciden.</string>
+    <string name="ContrasenyaCorta">La contraseña es demasiado corta(minimo 8 caracteres).</string>
 </resources>
