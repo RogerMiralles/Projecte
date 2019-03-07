@@ -1,5 +1,6 @@
 package com.example.miral.projecte;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.miral.projecte.fragments.calendario;
 import com.example.miral.projecte.fragments.compartir;
@@ -89,7 +89,11 @@ public class navegacion extends AppCompatActivity
             CargarFragmente(new compartir());
         }else if(id==R.id.nav_perfil) {
             CargarFragmente(new perfil());
-        }/* else if (id == R.id.nav_share) {
+        }else if(id==R.id.nav_ubi){
+            Intent listSong = new Intent(getApplicationContext(), MapsActivity.class);
+            startActivity(listSong);
+        }
+        /* else if (id == R.id.nav_share) {
             Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {
             Toast.makeText(this,"proximament",Toast.LENGTH_LONG).show();

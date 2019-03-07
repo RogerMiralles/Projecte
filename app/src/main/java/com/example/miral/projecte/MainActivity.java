@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.miral.projecte.MyDb.Usuari;
 import com.example.miral.projecte.MyDb.UsuariViewModel;
+import com.example.miral.projecte.fragments.idioma;
 
 import java.util.List;
 import java.util.Locale;
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClickIdioma(View view) {
-        Intent listSong = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+        Intent listSong = new Intent(getApplicationContext(), idiomaLog.class);
         startActivity(listSong);
 
     }

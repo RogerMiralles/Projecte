@@ -58,10 +58,6 @@ public class frecicler extends Fragment implements WordListAdapter.ItemClickList
     public void onItemClick(View view,int position){
         switch(position){
             case 0:
-                Intent intCardio = new Intent(getActivity().getApplicationContext(), vCardio.class);
-                startActivity(intCardio);
-                break;
-            case 1:
                 AlertDialog.Builder myAlertBuilder = new AlertDialog.Builder(getActivity());
                 myAlertBuilder.setTitle("Elije");
                 myAlertBuilder.setMessage("Prefieres ver el video en youtube o en tu aplicacion?");
@@ -80,27 +76,136 @@ public class frecicler extends Fragment implements WordListAdapter.ItemClickList
                 myAlertBuilder.setNegativeButton("aplicacion",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent intSpeed = new Intent(getActivity().getApplicationContext(), vSpeed.class);
-                                startActivity(intSpeed);
+                                Intent intCardio = new Intent(getActivity().getApplicationContext(), vCardio.class);
+                                startActivity(intCardio);
                             }
                         });
                 myAlertBuilder.show();
                 break;
+            case 1:
+                AlertDialog.Builder myAlertBuilder1 = new AlertDialog.Builder(getActivity());
+                myAlertBuilder1.setTitle("Elije");
+                myAlertBuilder1.setMessage("Prefieres ver el video en youtube o en tu aplicacion?");
+                myAlertBuilder1.setPositiveButton("youtube",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
+                                mediaIntent.setData(Uri.parse(
+                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                                    startActivity(mediaIntent);
+                                }
+                            }
+                        });
+
+                myAlertBuilder1.setNegativeButton("aplicacion",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intSpeed = new Intent(getActivity().getApplicationContext(), vSpeed.class);
+                                startActivity(intSpeed);
+                            }
+                        });
+                myAlertBuilder1.show();
+                break;
             case 2:
-                Intent intTBC = new Intent(getActivity().getApplicationContext(), vTBC.class);
-                startActivity(intTBC);
+                AlertDialog.Builder myAlertBuilder2 = new AlertDialog.Builder(getActivity());
+                myAlertBuilder2.setTitle("Elije");
+                myAlertBuilder2.setMessage("Prefieres ver el video en youtube o en tu aplicacion?");
+                myAlertBuilder2.setPositiveButton("youtube",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
+                                mediaIntent.setData(Uri.parse(
+                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                                    startActivity(mediaIntent);
+                                }
+                            }
+                        });
+
+                myAlertBuilder2.setNegativeButton("aplicacion",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intTBC = new Intent(getActivity().getApplicationContext(), vTBC.class);
+                                startActivity(intTBC);
+                            }
+                        });
+                myAlertBuilder2.show();
                 break;
             case 3:
-                Intent intABint = new Intent(getActivity().getApplicationContext(), vABinterval.class);
-                startActivity(intABint);
+                AlertDialog.Builder myAlertBuilder3 = new AlertDialog.Builder(getActivity());
+                myAlertBuilder3.setTitle("Elije");
+                myAlertBuilder3.setMessage("Prefieres ver el video en youtube o en tu aplicacion?");
+                myAlertBuilder3.setPositiveButton("youtube",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
+                                mediaIntent.setData(Uri.parse(
+                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                                    startActivity(mediaIntent);
+                                }
+                            }
+                        });
+
+                myAlertBuilder3.setNegativeButton("aplicacion",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intABint = new Intent(getActivity().getApplicationContext(), vABinterval.class);
+                                startActivity(intABint);
+                            }
+                        });
+                myAlertBuilder3.show();
                 break;
             case 4:
-                Intent intLowFoc = new Intent(getActivity().getApplicationContext(), vLowerFocus.class);
-                startActivity(intLowFoc);
+                AlertDialog.Builder myAlertBuilder4 = new AlertDialog.Builder(getActivity());
+                myAlertBuilder4.setTitle("Elije");
+                myAlertBuilder4.setMessage("Prefieres ver el video en youtube o en tu aplicacion?");
+                myAlertBuilder4.setPositiveButton("youtube",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
+                                mediaIntent.setData(Uri.parse(
+                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                                    startActivity(mediaIntent);
+                                }
+                            }
+                        });
+
+                myAlertBuilder4.setNegativeButton("aplicacion",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intLowFoc = new Intent(getActivity().getApplicationContext(), vLowerFocus.class);
+                                startActivity(intLowFoc);
+                            }
+                        });
+                myAlertBuilder4.show();
                 break;
             case 5:
-                Intent intDouble = new Intent(getActivity().getApplicationContext(), vDouble.class);
-                startActivity(intDouble);
+                AlertDialog.Builder myAlertBuilder5 = new AlertDialog.Builder(getActivity());
+                myAlertBuilder5.setTitle("Elije");
+                myAlertBuilder5.setMessage("Prefieres ver el video en youtube o en tu aplicacion?");
+                myAlertBuilder5.setPositiveButton("youtube",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
+                                mediaIntent.setData(Uri.parse(
+                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                                    startActivity(mediaIntent);
+                                }
+                            }
+                        });
+
+                myAlertBuilder5.setNegativeButton("aplicacion",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intDouble = new Intent(getActivity().getApplicationContext(), vDouble.class);
+                                startActivity(intDouble);
+                            }
+                        });
+                myAlertBuilder5.show();
                 break;
         }
     }

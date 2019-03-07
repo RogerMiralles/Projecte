@@ -50,4 +50,5 @@
     <string name="ErrorUsuaRegistro">El usuario es demasiado corto.</string>
     <string name="ContrasenyasDistintas">Las contraseñas no coinciden.</string>
     <string name="ContrasenyaCorta">La contraseña es demasiado corta(minimo 8 caracteres).</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

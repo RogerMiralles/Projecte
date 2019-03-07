@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Gris"
     tools:context=".fragments.idioma">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:scrollbars="vertical"
+        tools:listitem="@layout/recycler_view_item">
 
-</FrameLayout>
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.design.widget.CoordinatorLayout>
