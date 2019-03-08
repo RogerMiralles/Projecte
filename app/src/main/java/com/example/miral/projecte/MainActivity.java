@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.miral.projecte.MyDb.Usuari;
 import com.example.miral.projecte.MyDb.UsuariViewModel;
 import com.example.miral.projecte.fragments.idioma;
+import com.google.firebase.FirebaseApp;
 
 import java.util.List;
 import java.util.Locale;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseApp.initializeApp(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 

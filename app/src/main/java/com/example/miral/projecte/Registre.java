@@ -2,6 +2,7 @@ package com.example.miral.projecte;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,11 @@ import android.widget.Toast;
 
 import com.example.miral.projecte.MyDb.Usuari;
 import com.example.miral.projecte.MyDb.UsuariViewModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 import java.util.regex.Matcher;
@@ -21,11 +27,14 @@ public class Registre extends AppCompatActivity {
     TextView usuario,email,pass1,pass2,nombre, apellidos;
     TextView eusuario, eemail, epass1, enombre, eapellidos;
     private UsuariViewModel loginViewModel;
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseApp.initializeApp(this);
         super.onCreate(savedInstanceState);
+        firebaseAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_registre);
         usuario = findViewById(R.id.eTextUsuario);
         email = findViewById(R.id.etxtMail);
@@ -77,10 +86,25 @@ public class Registre extends AppCompatActivity {
             eapellidos.setText(getString(R.string.errorApellidos));
         }
         if(!temp) {
+
+            firebaseAuth.createUserWithEmailAndPassword(ema,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(Registre.this,getString(R.string.Success),Toast.LENGTH_LONG).show();
+                    }else {
+                        Toast.makeText(Registre.this,"Error",Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+            Toast.makeText(this,getString(R.string.Success),Toast.LENGTH_LONG).show();
+
+            /*
             Usuari usuari = new Usuari(usu, nom, ape, pass, ema);
             loginViewModel.insert(usuari);
-            Toast.makeText(this,getString(R.string.Success),Toast.LENGTH_LONG).show();
+
             this.finish();
+            */
         }
 
 //        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
