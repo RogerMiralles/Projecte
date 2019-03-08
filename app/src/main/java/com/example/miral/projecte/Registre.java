@@ -35,6 +35,7 @@ public class Registre extends AppCompatActivity {
    // private UsuariViewModel loginViewModel;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabase;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class Registre extends AppCompatActivity {
         epass1 = findViewById(R.id.txtErrorContraseña);
         enombre = findViewById(R.id.TxtnombreError);
         eapellidos = findViewById(R.id.txtApellidosError);
+        progressBar = findViewById(R.id.pb);
         //model
         //loginViewModel = ViewModelProviders.of(Registre.this).get(UsuariViewModel.class);
     }
@@ -68,7 +70,7 @@ public class Registre extends AppCompatActivity {
         epass1.setText("");
         enombre.setText("");
         eapellidos.setText("");
-
+        progressBar.setVisibility(View.VISIBLE);
 
         final String usu = usuario.getText().toString();
         if(compruebaUsu(usu)) temp = true;
@@ -97,7 +99,7 @@ public class Registre extends AppCompatActivity {
             firebaseAuth.createUserWithEmailAndPassword(ema,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-
+                    progressBar.setVisibility(View.INVISIBLE);
                     if(task.isSuccessful()){
 
                         Usuarios usuario = new Usuarios(usu,nom,ape);
@@ -138,6 +140,9 @@ public class Registre extends AppCompatActivity {
 
             this.finish();
             */
+        }
+        else{
+            progressBar.setVisibility(View.INVISIBLE);
         }
 
 //        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
