@@ -87,6 +87,7 @@ public class navegacion extends AppCompatActivity
             //CargarFragmente(new idioma());
             Intent listSong = new Intent(getApplicationContext(), idiomaLog.class);
             startActivity(listSong);
+            
         } else if (id == R.id.nav_manage) {
             CargarFragmente(new compartir());
         }else if(id==R.id.nav_perfil) {
