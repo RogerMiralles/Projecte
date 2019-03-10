@@ -63,7 +63,7 @@ public class idioma extends Fragment implements WordListAdapter.ItemClickListene
                 break;
             case 2:
                 Toast.makeText(getActivity().getApplicationContext(), "Traduciendo al ingles", Toast.LENGTH_SHORT).show();
-                setLocale("ca-rES");
+                setLocale("en");
                 getActivity().recreate();
                 break;
         }
