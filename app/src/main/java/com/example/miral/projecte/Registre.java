@@ -108,7 +108,7 @@ public class Registre extends AppCompatActivity {
                     if(task.isSuccessful()){
                         CollectionReference dbUsers = db.collection("Users");
 
-                        Usuarios usuario = new Usuarios(ema,usu,nom,ape);
+                        Usuarios usuario = new Usuarios(usu,nom,ape);
                         dbUsers.add(usuario).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
