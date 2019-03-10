@@ -36,7 +36,7 @@ public class idiomaLog extends AppCompatActivity {
     }
 
     private void showChangeLanguageDialog() {
-        final String[] listItems={"Castellano","Catalan","Ingles"};
+        final String[] listItems={"Castellano","Catalan"};
         AlertDialog.Builder mBuilder=new AlertDialog.Builder(idiomaLog.this);
         mBuilder.setTitle("Elige Idioma.....");
         mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
