@@ -33,11 +33,5 @@ public class Usuarios {
         this.Apellidos=cognom;
     }
 
-    public String getCorreo() {
-        return correo;
-    }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
 }
