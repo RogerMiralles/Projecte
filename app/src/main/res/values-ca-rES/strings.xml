@@ -37,4 +37,6 @@
     <string name="ContrasenyasDistintas">Les contrasenyes no coinicideixen.</string>
     <string name="ContrasenyaCorta">La contrasenya es molt curta(mínim 8 caràcters).</string>
     <string name="ErrorLogin">El correu o la contrasenya no son vàlids</string>
+    <string name="Compartir">Comparteix la nostra app</string>
+    <string name="compartirTex">Hola! he descobert aquesta app que et pot interesar</string>
 </resources>

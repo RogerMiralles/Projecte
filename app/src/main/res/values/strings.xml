@@ -53,4 +53,6 @@
     <string name="title_activity_maps" translatable="false">Map</string>
     <string name="ModificarPerfil" translatable="false">Modificar Perfil</string>
     <string name="ErrorLogin">El correo o la contraseña no son correctos</string>
+    <string name="Compartir">Compartir nuestra app</string>
+    <string name="compartirTex">Hola! he descubierto esta app que te puede molar!</string>
 </resources>
