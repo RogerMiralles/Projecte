@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 
 import java.util.List;
 import java.util.Locale;
@@ -90,7 +91,13 @@ public class MainActivity extends AppCompatActivity {
                         Intent listSong = new Intent(getApplicationContext(), navegacion.class);
                         startActivity(listSong);
                     }else{
-                        Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        try{
+                            throw task.getException();
+                        }catch (FirebaseAuthInvalidCredentialsException e){
+                        Toast.makeText(getApplicationContext(),getString(R.string.ErrorLogin),Toast.LENGTH_SHORT).show();
+                    }catch (Exception e){
+                            Toast.makeText(getApplicationContext(),"Error.",Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             });

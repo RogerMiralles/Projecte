@@ -36,4 +36,5 @@
     <string name="ErrorUsuaRegistro">L\'usuari es molt curt.</string>
     <string name="ContrasenyasDistintas">Les contrasenyes no coinicideixen.</string>
     <string name="ContrasenyaCorta">La contrasenya es molt curta(mínim 8 caràcters).</string>
+    <string name="ErrorLogin">El correu o la contrasenya no son vàlids</string>
 </resources>
