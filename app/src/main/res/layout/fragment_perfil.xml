@@ -1,15 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/Gris"
     tools:context=".fragments.perfil">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tViewNom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/txtUsuari"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/eTextUsuario"
+        app:layout_constraintEnd_toStartOf="@+id/tViewCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Usuario" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/etxtPass2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="false"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etxtPass"
+        app:layout_constraintTop_toBottomOf="@+id/tViewPSeguro"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etxtApellidos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etxtNombre"
+        app:layout_constraintTop_toBottomOf="@+id/tViewApellidos"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tViewApellidos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/lblApellidos"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtApellidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tViewNombre"
+        app:layout_constraintTop_toBottomOf="@+id/etxtPass2"
+        tools:text="Apellidos" />
+
+    <EditText
+        android:id="@+id/etxtNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/TxtnombreError"
+        app:layout_constraintEnd_toStartOf="@+id/etxtApellidos"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tViewNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/lblNombre"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtNombre"
+        app:layout_constraintEnd_toStartOf="@+id/tViewApellidos"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Nombre" />
+
+    <TextView
+        android:id="@+id/tViewPSeguro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/lblConfContra"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtPass2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etxtMail"
+        tools:text="Confirma contraseña" />
+
+    <TextView
+        android:id="@+id/tViewPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/etPass"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtPass"
+        app:layout_constraintEnd_toStartOf="@+id/tViewPSeguro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTextUsuario"
+        tools:text="Contraseña" />
+
+    <EditText
+        android:id="@+id/etxtMail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eTextUsuario"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tViewCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/lblCorreo"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/etxtMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tViewNom"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Correo" />
+
+
+    <EditText
+        android:id="@+id/eTextUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="@color/Blanco"
+        app:layout_constraintBottom_toTopOf="@+id/txtErrorUsu"
+        app:layout_constraintEnd_toStartOf="@+id/etxtMail"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/etxtPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textColor="@color/Blanco"
+        app:layout_constraintEnd_toStartOf="@+id/etxtPass2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tViewPassword"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/txtErrorUsu"
+        android:layout_width="168dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/ModificarPerfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <TextView
+        android:id="@+id/txtCorreoNoValido"
+        android:layout_width="174dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tViewPSeguro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtMail"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/txtErrorContraseña"
+        android:layout_width="168dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtnombreError"
+        android:layout_width="168dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtApellidosError"
+        android:layout_width="168dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegistro"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toEndOf="@+id/TxtnombreError"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
