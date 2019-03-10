@@ -44,14 +44,16 @@ public class idioma extends Fragment implements WordListAdapter.ItemClickListene
         return rootView;
     }
     public void onItemClick(View view,int position){
-        Toast.makeText(getActivity().getApplicationContext(), "Trabajando", Toast.LENGTH_SHORT).show();
-        /*switch(position){
+        switch(position){
             case 0:
+                Toast.makeText(getActivity().getApplicationContext(), "Traduciendo al castellano", Toast.LENGTH_SHORT).show();
                 break;
             case 1:
+                Toast.makeText(getActivity().getApplicationContext(), "Traduciendo al catalan", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
+                Toast.makeText(getActivity().getApplicationContext(), "Traduciendo al ingles", Toast.LENGTH_SHORT).show();
                 break;
-        }*/
+        }
     }
 }
