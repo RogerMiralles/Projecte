@@ -64,7 +64,7 @@ public class frecicler extends Fragment implements WordListAdapter.ItemClickList
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
                                 mediaIntent.setData(Uri.parse(
-                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                        "https://www.youtube.com/watch?v=bPNBMgS_f3o"));
                                 if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
                                     startActivity(mediaIntent);
                                 }
@@ -114,7 +114,7 @@ public class frecicler extends Fragment implements WordListAdapter.ItemClickList
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
                                 mediaIntent.setData(Uri.parse(
-                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                        "https://www.youtube.com/watch?v=rwLp5gY4UxA"));
                                 if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
                                     startActivity(mediaIntent);
                                 }
@@ -139,7 +139,7 @@ public class frecicler extends Fragment implements WordListAdapter.ItemClickList
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent mediaIntent = new Intent(Intent.ACTION_VIEW);
                                 mediaIntent.setData(Uri.parse(
-                                        "https://www.youtube.com/watch?v=X4MOI5Q0NlU"));
+                                        "https://www.youtube.com/watch?v=EDy214GHDOg"));
                                 if (mediaIntent.resolveActivity(getActivity().getPackageManager()) != null) {
                                     startActivity(mediaIntent);
                                 }

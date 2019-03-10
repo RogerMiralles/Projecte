@@ -2,15 +2,27 @@ package com.example.miral.projecte;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.miral.projecte.MyDb.Usuari;
 import com.example.miral.projecte.MyDb.UsuariViewModel;
+import com.example.miral.projecte.MyDb.Usuarios;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 import java.util.regex.Matcher;
@@ -20,12 +32,17 @@ public class Registre extends AppCompatActivity {
 
     TextView usuario,email,pass1,pass2,nombre, apellidos;
     TextView eusuario, eemail, epass1, enombre, eapellidos;
-    private UsuariViewModel loginViewModel;
-
+   // private UsuariViewModel loginViewModel;
+    private FirebaseAuth firebaseAuth;
+    private DatabaseReference mDatabase;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseApp.initializeApp(this);
         super.onCreate(savedInstanceState);
+        firebaseAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         setContentView(R.layout.activity_registre);
         usuario = findViewById(R.id.eTextUsuario);
         email = findViewById(R.id.etxtMail);
@@ -39,8 +56,9 @@ public class Registre extends AppCompatActivity {
         epass1 = findViewById(R.id.txtErrorContraseña);
         enombre = findViewById(R.id.TxtnombreError);
         eapellidos = findViewById(R.id.txtApellidosError);
+        progressBar = findViewById(R.id.pb);
         //model
-        loginViewModel = ViewModelProviders.of(Registre.this).get(UsuariViewModel.class);
+        //loginViewModel = ViewModelProviders.of(Registre.this).get(UsuariViewModel.class);
     }
     public void onClickLog(View view){
         this.finish();
@@ -52,35 +70,79 @@ public class Registre extends AppCompatActivity {
         epass1.setText("");
         enombre.setText("");
         eapellidos.setText("");
+        progressBar.setVisibility(View.VISIBLE);
 
-
-        String usu = usuario.getText().toString();
+        final String usu = usuario.getText().toString();
         if(compruebaUsu(usu)) temp = true;
 
         String ema = email.getText().toString().trim();
- //       if(compruebaemail(ema)) temp = true;
+        if(compruebaemail(ema)) temp = true;
 
         String pass = pass1.getText().toString().trim();
         String passw2 = pass2.getText().toString().trim();
         if(compruebaContra(pass,passw2)) temp = true;
 
-        String nom = nombre.getText().toString().trim();
+        final String nom = nombre.getText().toString().trim();
         if(compruebaNom(nom)){
             temp = true;
             enombre.setVisibility(View.VISIBLE);
             enombre.setText(getString(R.string.NnoValido));
         }
-        String ape = apellidos.getText().toString().trim();
+        final String ape = apellidos.getText().toString().trim();
         if(compruebaNom(ape)){
             temp = true;
             eapellidos.setVisibility(View.VISIBLE);
             eapellidos.setText(getString(R.string.errorApellidos));
         }
         if(!temp) {
+
+            firebaseAuth.createUserWithEmailAndPassword(ema,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    progressBar.setVisibility(View.INVISIBLE);
+                    if(task.isSuccessful()){
+
+                        Usuarios usuario = new Usuarios(usu,nom,ape);
+                        /*mDatabase.child("users").setValue(usuario).
+                        addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+
+                                if(task.isSuccessful()){
+                                    Toast.makeText(Registre.this,getString(R.string.Success),Toast.LENGTH_LONG).show();
+                                    finish();
+                                }else{
+                                    Toast.makeText(Registre.this, "Error.", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });*/
+                        Toast.makeText(Registre.this,getString(R.string.Success),Toast.LENGTH_LONG).show();
+                        finish();
+                    }else {
+                        try{
+                          throw task.getException();
+                        }catch (FirebaseAuthUserCollisionException e){
+                            Toast.makeText(Registre.this,e.getMessage(),Toast.LENGTH_LONG).show();
+                        }catch (FirebaseAuthWeakPasswordException e){
+                            Toast.makeText(Registre.this,getString(R.string.econtra),Toast.LENGTH_LONG).show();
+                        }catch (Exception e){
+                            Toast.makeText(Registre.this, "Error.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            });
+
+
+
+            /*
             Usuari usuari = new Usuari(usu, nom, ape, pass, ema);
             loginViewModel.insert(usuari);
-            Toast.makeText(this,getString(R.string.Success),Toast.LENGTH_LONG).show();
+
             this.finish();
+            */
+        }
+        else{
+            progressBar.setVisibility(View.INVISIBLE);
         }
 
 //        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
