@@ -84,7 +84,10 @@ public class navegacion extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             CargarFragmente(new frecicler());
         } else if (id == R.id.nav_slideshow) {
-            CargarFragmente(new idioma());
+            //CargarFragmente(new idioma());
+            Intent listSong = new Intent(getApplicationContext(), idiomaLog.class);
+            startActivity(listSong);
+
         } else if (id == R.id.nav_manage) {
             CargarFragmente(new compartir());
         }else if(id==R.id.nav_perfil) {
