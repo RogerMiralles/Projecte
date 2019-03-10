@@ -1,5 +1,6 @@
 package com.example.miral.projecte.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -31,7 +32,7 @@ public class idioma extends Fragment implements WordListAdapter.ItemClickListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        loadLocale();
+
         View rootView= inflater.inflate(R.layout.fragment_idioma, container, false);
         mWordList.addLast("Castellano");
         mWordList.addLast("Catalan");
@@ -46,6 +47,7 @@ public class idioma extends Fragment implements WordListAdapter.ItemClickListene
         mAdapter = new WordListAdapter(getActivity().getApplicationContext(),mWordList);
         mAdapter.setClickListener(this);
         mRecyclerView.setAdapter(mAdapter);
+        loadLocale();
         return rootView;
     }
     public void onItemClick(View view,int position){
@@ -54,7 +56,6 @@ public class idioma extends Fragment implements WordListAdapter.ItemClickListene
                 Toast.makeText(getActivity().getApplicationContext(), "Traduciendo al castellano", Toast.LENGTH_SHORT).show();
                 setLocale("ca-rES");
                 getActivity().recreate();
-
                 break;
             case 1:
                 Toast.makeText(getActivity().getApplicationContext(), "Traduciendo al catalan", Toast.LENGTH_SHORT).show();
@@ -81,7 +82,7 @@ public class idioma extends Fragment implements WordListAdapter.ItemClickListene
 
     }
     public void loadLocale(){
-        SharedPreferences prefs =getActivity().getSharedPreferences("Settings",getActivity().MODE_PRIVATE);
+        SharedPreferences prefs =getActivity().getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         String language=prefs.getString("My_Lang","");
         setLocale(language);
     }
