@@ -15,6 +15,8 @@ import com.example.miral.projecte.MyDb.Usuari;
 import com.example.miral.projecte.MyDb.UsuariViewModel;
 import com.example.miral.projecte.MyDb.Usuarios;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
@@ -23,6 +25,9 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 import java.util.regex.Matcher;
@@ -34,15 +39,14 @@ public class Registre extends AppCompatActivity {
     TextView eusuario, eemail, epass1, enombre, eapellidos;
    // private UsuariViewModel loginViewModel;
     private FirebaseAuth firebaseAuth;
-    private DatabaseReference mDatabase;
     private ProgressBar progressBar;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         FirebaseApp.initializeApp(this);
         super.onCreate(savedInstanceState);
         firebaseAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
         setContentView(R.layout.activity_registre);
         usuario = findViewById(R.id.eTextUsuario);
         email = findViewById(R.id.etxtMail);
@@ -59,6 +63,7 @@ public class Registre extends AppCompatActivity {
         progressBar = findViewById(R.id.pb);
         //model
         //loginViewModel = ViewModelProviders.of(Registre.this).get(UsuariViewModel.class);
+         db = FirebaseFirestore.getInstance();
     }
     public void onClickLog(View view){
         this.finish();
@@ -75,7 +80,7 @@ public class Registre extends AppCompatActivity {
         final String usu = usuario.getText().toString();
         if(compruebaUsu(usu)) temp = true;
 
-        String ema = email.getText().toString().trim();
+        final String ema = email.getText().toString().trim();
         if(compruebaemail(ema)) temp = true;
 
         String pass = pass1.getText().toString().trim();
@@ -101,8 +106,21 @@ public class Registre extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     progressBar.setVisibility(View.INVISIBLE);
                     if(task.isSuccessful()){
+                        CollectionReference dbUsers = db.collection("Users");
 
-                        Usuarios usuario = new Usuarios(usu,nom,ape);
+                        Usuarios usuario = new Usuarios(ema,usu,nom,ape);
+                        dbUsers.add(usuario).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Toast.makeText(Registre.this,getString(R.string.Success),Toast.LENGTH_LONG).show();
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(Registre.this,"Error.",Toast.LENGTH_LONG).show();
+                            }
+                        });
                         /*mDatabase.child("users").setValue(usuario).
                         addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
@@ -116,8 +134,7 @@ public class Registre extends AppCompatActivity {
                                 }
                             }
                         });*/
-                        Toast.makeText(Registre.this,getString(R.string.Success),Toast.LENGTH_LONG).show();
-                        finish();
+
                     }else {
                         try{
                           throw task.getException();

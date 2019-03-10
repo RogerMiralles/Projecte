@@ -1,7 +1,7 @@
 package com.example.miral.projecte.MyDb;
 
 public class Usuarios {
-    private String user,nombre,Apellidos;
+    private String user,nombre,Apellidos,correo;
 
     public String getApellidos() {
         return Apellidos;
@@ -26,9 +26,18 @@ public class Usuarios {
     public void setUser(String usuari) {
         this.user = usuari;
     }
-    public Usuarios(String usuari, String nom, String cognom){
+    public Usuarios(String correo,String usuari, String nom, String cognom){
+        this.correo = correo;
         this.user=usuari;
         this.nombre=nom;
         this.Apellidos=cognom;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 }
