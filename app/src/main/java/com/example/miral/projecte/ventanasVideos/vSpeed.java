@@ -14,8 +14,7 @@ import android.widget.VideoView;
 import com.example.miral.projecte.R;
 
 public class vSpeed extends AppCompatActivity {
-    private static final String VIDEO_SAMPLE =
-            "https://developers.google.com/training/images/tacoma_narrows.mp4";
+    private static final String VIDEO_SAMPLE = "tacoma_narrows";
     private VideoView mVideoView;
     private TextView mBufferingTextView;
     private TextView nombreEj;
